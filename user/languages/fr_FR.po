@@ -1,0 +1,1439 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: YOURLS 1.7\n"
+"POT-Creation-Date: 2014-01-11 11:50+0100\n"
+"PO-Revision-Date: 2017-09-28 21:43+0100\n"
+"Last-Translator: Ozh <ozh[at]ozh.org>\n"
+"Language-Team: \n"
+"Language: fr\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.4\n"
+"X-Poedit-KeywordsList: yourls__;yourls_e;yourls_s;yourls_se;"
+"yourls_esc_attr__;yourls_esc_html__;yourls_x;yourls_ex;yourls_esc_attr_x;"
+"yourls_esc_html_x;yourls_n:1,2;yourls_nx:1,2;yourls_n_noop:1,2;"
+"yourls_nx_noop:1,2\n"
+"X-Poedit-Basepath: .\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: yourls-infos.php:204
+#, php-format
+msgid "Statistics for %s"
+msgstr "Statistiques pour %s"
+
+#: yourls-infos.php:211 admin/index.php:15 admin/index.php:34
+#: admin/index.php:93 includes/functions-html.php:209
+#: includes/functions-html.php:221 includes/functions-html.php:464
+#: includes/functions-html.php:626
+msgid "Short URL"
+msgstr "URL courte"
+
+#: yourls-infos.php:227
+msgid "Aggregate stats for duplicate short URLs"
+msgstr "Statistiques aggrégées pour plusieurs URL courtes"
+
+#: yourls-infos.php:229 includes/functions-html.php:464
+msgid "Long URL"
+msgstr "URL longue"
+
+#: yourls-infos.php:235 yourls-infos.php:246
+msgid "Traffic statistics"
+msgstr "Statistiques de trafic"
+
+#: yourls-infos.php:236 yourls-infos.php:432
+msgid "Traffic location"
+msgstr "Origine du trafic"
+
+#: yourls-infos.php:237 yourls-infos.php:469
+msgid "Traffic sources"
+msgstr "Provenance de trafic"
+
+#: yourls-infos.php:239 yourls-infos.php:539 includes/functions-html.php:505
+#: includes/functions-html.php:506
+msgid "Share"
+msgstr "Partager"
+
+#: yourls-infos.php:254 yourls-infos.php:294
+msgid "Last 24 hours"
+msgstr "Dernières 24 heures"
+
+#: yourls-infos.php:255 yourls-infos.php:296
+msgid "Last 7 days"
+msgstr "Derniers 7 jours"
+
+#: yourls-infos.php:256 yourls-infos.php:298
+msgid "Last 30 days"
+msgstr "Derniers 30 jours"
+
+#: yourls-infos.php:257 yourls-infos.php:300
+msgid "All time"
+msgstr "Tout"
+
+#: yourls-infos.php:309
+#, php-format
+msgid "Number of hits : %s"
+msgstr "Nombre de visites : %s"
+
+#: yourls-infos.php:332
+msgid "Historical click count"
+msgstr "Historiques des visites"
+
+#: yourls-infos.php:338
+#, php-format
+msgid "about 1 day ago"
+msgid_plural "about %s days ago"
+msgstr[0] "il y a 1 jour environ"
+msgstr[1] "il y a %s jours environ"
+
+#. //translators: eg Short URL created on March 23rd 1972
+#: yourls-infos.php:341
+#, php-format
+msgid "Short URL created on %s"
+msgstr "URL courte créée le %s"
+
+#: yourls-infos.php:356 yourls-infos.php:363
+#, php-format
+msgid "%s per day"
+msgstr "%s par jour"
+
+#: yourls-infos.php:359
+#, php-format
+msgid "%s per hour"
+msgstr "%s par heure"
+
+#: yourls-infos.php:366
+#, php-format
+msgid "%s hit"
+msgid_plural "%s hits"
+msgstr[0] "%s visite"
+msgstr[1] "%s visites"
+
+#: yourls-infos.php:373
+msgid "Best day"
+msgstr "Meilleur jour"
+
+#. //translators: eg. 43 hits on January 1, 1970
+#: yourls-infos.php:380
+#, php-format
+msgid "<strong>%1$s</strong> hit on %2$s"
+msgid_plural "<strong>%1$s</strong> hits on %2$s"
+msgstr[0] "<strong>%1$s</strong> visite le %2$s"
+msgstr[1] "<strong>%1$s</strong> visites le %2$s"
+
+#: yourls-infos.php:381 yourls-infos.php:443
+msgid "Click for more details"
+msgstr "Cliquer pour plus de détails"
+
+#: yourls-infos.php:387 yourls-infos.php:390
+#, php-format
+msgid "Year %s"
+msgstr "Année %s"
+
+#: yourls-infos.php:409 yourls-infos.php:447
+#, php-format
+msgid "1 hit"
+msgid_plural "%s hits"
+msgstr[0] "1 visite"
+msgstr[1] "%s visites"
+
+#: yourls-infos.php:426
+msgid "No traffic yet. Get some clicks first!"
+msgstr "Pas encore de trafic. Collectez quelques visites d'abord&nbsp;!"
+
+#: yourls-infos.php:441
+msgid "Top 5 countries"
+msgstr "5 meilleurs pays"
+
+#: yourls-infos.php:454
+msgid "Overall traffic"
+msgstr "Vue d'ensemble"
+
+#: yourls-infos.php:463
+msgid "No country data."
+msgstr "Pas de donnée par pays."
+
+#: yourls-infos.php:478
+msgid "Referrer shares"
+msgstr "Répartition des sources de trafic"
+
+#: yourls-infos.php:481
+msgid "Others"
+msgstr "Autres"
+
+#: yourls-infos.php:485 yourls-infos.php:518
+msgid "Referrers"
+msgstr "Sites réferents"
+
+#: yourls-infos.php:492 yourls-infos.php:502
+msgid "(details)"
+msgstr "(détails)"
+
+#: yourls-infos.php:502
+msgid "Various:"
+msgstr "Divers :"
+
+#: yourls-infos.php:516
+msgid "Direct vs Referrer Traffic"
+msgstr "Accès directs vs Sites référents"
+
+#: yourls-infos.php:518
+msgid "Direct"
+msgstr "Accès directs"
+
+#: yourls-infos.php:520
+msgid "Direct traffic:"
+msgstr "Accès directs :"
+
+#: yourls-infos.php:520 yourls-infos.php:521
+#, php-format
+msgid "<strong>%s</strong> hit"
+msgid_plural "<strong>%s</strong> hits"
+msgstr[0] "<strong>%s</strong> visite"
+msgstr[1] "<strong>%s</strong> visites"
+
+#: yourls-infos.php:521
+msgid "Referrer traffic:"
+msgstr "Trafic via des sites référents&nbsp;:"
+
+#: yourls-infos.php:530
+msgid "No referrer data."
+msgstr "Pas de donnée en provenance de sites référents."
+
+#: yourls-infos.php:541
+msgid "Short link"
+msgstr "Lien court"
+
+#: yourls-infos.php:541 includes/functions-html.php:359
+msgid "Quick Share"
+msgstr "Partage Rapide"
+
+#: admin/index.php:13 admin/index.php:38 admin/index.php:97
+#: includes/functions-html.php:210 includes/functions-html.php:222
+msgid "URL"
+msgstr "URL"
+
+#: admin/index.php:42 includes/functions-html.php:211
+#: includes/functions-html.php:464
+msgid "Title"
+msgstr "Titre"
+
+#: admin/index.php:46 admin/index.php:105
+msgid "IP Address"
+msgstr "Adresse IP"
+
+#: admin/index.php:50
+#, php-format
+msgid "Searching for <strong>%1$s</strong> in <strong>%2$s</strong>."
+msgstr "Recherche de <strong>%1$s</strong> dans <strong>%2$s</strong>."
+
+#: admin/index.php:101 includes/functions-html.php:223
+#: includes/functions-html.php:628
+msgid "Date"
+msgstr "Date"
+
+#: admin/index.php:109 includes/functions-html.php:225
+#: includes/functions-html.php:630
+msgid "Clicks"
+msgstr "Visites"
+
+#: admin/index.php:187 admin/index.php:198 admin/index.php:209
+#, php-format
+msgid "Short URL created, but could not redirect to %s !"
+msgstr "URL courte créée, mais impossible de rediriger vers %s&nbsp;!"
+
+#: admin/index.php:219
+msgid "Unknown \"Share\" bookmarklet"
+msgstr "Bookmarklet de partage inconnu"
+
+#: admin/index.php:272
+#, php-format
+msgid ""
+"Display <strong>%1$s</strong> to <strong class=\"increment\">%2$s</strong> "
+"of <strong class=\"increment\">%3$s</strong> URLs"
+msgstr ""
+"Affichage de <strong>%1$s</strong> à <strong class=\"increment\">%2$s</"
+"strong> sur <strong class=\"increment\">%3$s</strong> URLs"
+
+#: admin/index.php:274
+#, php-format
+msgid "counting <strong>1</strong> click"
+msgid_plural "counting <strong>%s</strong> clicks"
+msgstr[0] "totalisant <strong>1</strong> visite"
+msgstr[1] "totalisant <strong>%s</strong> visites"
+
+#: admin/index.php:277
+#, php-format
+msgid ""
+"Overall, tracking <strong class=\"increment\">%1$s</strong> links, <strong>"
+"%2$s</strong> clicks, and counting!"
+msgstr ""
+"Dans l'ensemble, <strong class=\"increment\">%1$s</strong> liens, <strong>"
+"%2$s</strong> visites, et ce n'est pas fini&nbsp;!"
+
+#: admin/index.php:337
+msgid "No URL"
+msgstr "Pas d'URL"
+
+#: admin/install.php:13 admin/install.php:18
+#, php-format
+msgid "%s version is too old. Ask your server admin for an upgrade."
+msgstr ""
+"La version de %s est obsolète. Contactez votre administrateur serveur pour "
+"une mise à jour."
+
+#: admin/install.php:24
+msgid "YOURLS already installed."
+msgstr "YOURLS déjà installé."
+
+#: admin/install.php:35
+msgid "File <tt>.htaccess</tt> successfully created/updated."
+msgstr "Fichier <tt>.htaccess</tt> créé/mis à jour avec succès."
+
+#: admin/install.php:37
+msgid ""
+"Could not write file <tt>.htaccess</tt> in YOURLS root directory. You will "
+"have to do it manually. See <a href=\"http://yourls.org/htaccess\">how</a>."
+msgstr ""
+"Impossible d'écrire le fichier <tt>.htaccess</tt> dans le répertoire racine "
+"de YOURLS. Vous devrez le faire manuellement. <a href=\"http://yourls.org/"
+"htaccess\">Consulter la méthodologie</a>."
+
+#: admin/install.php:50 admin/install.php:71
+msgid "Install YOURLS"
+msgstr "Installer YOURLS"
+
+#: admin/install.php:74
+msgid "YOURLS Administration Page"
+msgstr "Administration de YOURLS"
+
+#: admin/plugins.php:38
+msgid "Unsupported action"
+msgstr "Action impossible"
+
+#: admin/plugins.php:42
+msgid "No plugin specified, or not a valid plugin"
+msgstr "Aucun plugin spécifié, ou bien plugin invalide"
+
+#: admin/plugins.php:51
+msgid "Plugin has been activated"
+msgstr "Le plugin a été activé"
+
+#: admin/plugins.php:53
+msgid "Plugin has been deactivated"
+msgstr "Le plugin a été désactivé"
+
+#: admin/plugins.php:58 includes/functions-html.php:745
+msgid "Manage Plugins"
+msgstr "Gérer les plugins"
+
+#: admin/plugins.php:63
+msgid "Plugins"
+msgstr "Plugins"
+
+#: admin/plugins.php:70
+#, php-format
+msgid "%s plugin"
+msgid_plural "%s plugins"
+msgstr[0] "%s plugin"
+msgstr[1] "%s plugins"
+
+#. //translators: "you have '3 plugins' installed and '1' activated"
+#: admin/plugins.php:74
+#, php-format
+msgid ""
+"You currently have <strong>%1$s</strong> installed, and <strong>%2$s</"
+"strong> activated"
+msgstr ""
+"Vous avez actuellement <strong>%1$s</strong> installé(s) et <strong>%2$s</"
+"strong> activé(s)"
+
+#: admin/plugins.php:79
+msgid "Plugin Name"
+msgstr "Nom du Plugin"
+
+#: admin/plugins.php:80
+msgid "Version"
+msgstr "Version"
+
+#: admin/plugins.php:81
+msgid "Description"
+msgstr "Description"
+
+#: admin/plugins.php:82
+msgid "Author"
+msgstr "Auteur"
+
+#: admin/plugins.php:83
+msgid "Action"
+msgstr "Action"
+
+#: admin/plugins.php:118
+msgid "Deactivate"
+msgstr "Désactiver"
+
+#: admin/plugins.php:122
+msgid "Activate"
+msgstr "Activer"
+
+#: admin/plugins.php:133
+#, php-format
+msgid "plugin file location: %s"
+msgstr "Emplacement du fichier : %s"
+
+#: admin/plugins.php:150
+msgid "Toggle active/inactive plugins"
+msgstr "Afficher les plugins actifs/inactifs"
+
+#: admin/plugins.php:157
+msgid ""
+"If something goes wrong after you activate a plugin and you cannot use "
+"YOURLS or access this page, simply rename or delete its directory, or rename "
+"the plugin file to something different than <code>plugin.php</code>."
+msgstr ""
+"Si l'activation d'un plugin vous empêche d'utiliser YOURLS ou d'accéder à "
+"cette page, renommer ou supprimer son répertoire, ou renommer le fichier "
+"plugin par un nom autre que <code>plugin.php</code>."
+
+#: admin/plugins.php:159
+msgid "More plugins"
+msgstr "Plus de plugins"
+
+#: admin/plugins.php:161
+msgid ""
+"For more plugins, head to the official <a href=\"http://yourls.org/pluginlist"
+"\">Plugin list</a>."
+msgstr ""
+"Pour obtenir davantage de plugins, rendez vous sur la <a href=\"http://"
+"yourls.org/pluginlist\">liste officielle des plugins</a>."
+
+#: admin/tools.php:6
+msgid "Cool YOURLS Tools"
+msgstr "Outils YOURLS sympas"
+
+#: admin/tools.php:13
+msgid "Bookmarklets"
+msgstr "Bookmarklets"
+
+#: admin/tools.php:15
+msgid ""
+"YOURLS comes with handy <span>bookmarklets</span> for easier link shortening "
+"and sharing."
+msgstr ""
+"YOURLS inclut quatre <span>bookmarklets</span> pratiques pour raccourcir "
+"facilement des liens."
+
+#: admin/tools.php:17
+msgid "Standard or Instant, Simple or Custom"
+msgstr "Standard ou Instantané, Simple ou Personnalisé"
+
+#: admin/tools.php:20
+msgid ""
+"The <span>Standard Bookmarklets</span> will take you to a page where you can "
+"easily edit or delete your brand new short URL."
+msgstr ""
+"Les <span>Bookmarklets standards</span> vous dirigeront vers une page où "
+"vous pourrez facilement éditer ou supprimer votre nouvelle URL courte."
+
+#: admin/tools.php:22
+msgid ""
+"The <span>Instant Bookmarklets</span> will pop the short URL without leaving "
+"the page you are viewing."
+msgstr ""
+"Les <span>Bookmarklets instantanés</span> afficheront une URL courte sans "
+"quitter la page que vous êtes en train de visiter."
+
+#: admin/tools.php:24
+msgid ""
+"The <span>Simple Bookmarklets</span> will generate a short URL with a random "
+"or sequential keyword."
+msgstr ""
+"Les <span>Bookmarklets simples</span> généreront une URL courte avec un mot "
+"clé aléatoire ou séquentiel."
+
+#: admin/tools.php:26
+msgid ""
+"The <span>Custom Keyword Bookmarklets</span> will prompt you for a custom "
+"keyword first."
+msgstr ""
+"Les <span>Bookmarklets personnalisés</span> vous demanderont un mot clé "
+"personnalisé d'abord."
+
+#: admin/tools.php:30
+msgid ""
+"If you want to share a description along with the link you're shortening, "
+"simply <span>select text</span> on the page you're viewing before clicking "
+"on your bookmarklet link"
+msgstr ""
+"Si vous voulez ajouter une description au lien que vous raccourcissez, il "
+"suffit de <span>sélectionner du texte</span> sur la page que vous visitez "
+"avant de cliquer sur le lien du marque-page."
+
+#: admin/tools.php:33
+msgid "The Bookmarklets"
+msgstr "Les Bookmarklets"
+
+#: admin/tools.php:35 admin/tools.php:62
+msgid "Click and drag links to your toolbar (or right-click and bookmark it)"
+msgstr ""
+"Cliquez et déplacez les liens dans votre barre d'outils (ou clic droit puis "
+"enregistez dans vos favoris)"
+
+#: admin/tools.php:41
+msgid "Standard (new page)"
+msgstr "Standard (nouvelle page)"
+
+#: admin/tools.php:42
+msgid "Instant (popup)"
+msgstr "Instantané (boite de dialogue)"
+
+#: admin/tools.php:47
+msgid "Simple"
+msgstr "Simple"
+
+#: admin/tools.php:48 admin/tools.php:49 admin/tools.php:53 admin/tools.php:54
+#: admin/tools.php:68 admin/tools.php:70 admin/tools.php:72
+msgid "Drag to your toolbar!"
+msgstr "Déplacer dans votre barre d'outils&nbsp;!"
+
+#: admin/tools.php:48
+msgid "Shorten"
+msgstr "Raccourci"
+
+#: admin/tools.php:49
+msgid "Instant Shorten"
+msgstr "Raccourci Instantané"
+
+#: admin/tools.php:52
+msgid "Custom Keyword"
+msgstr "Mot clé personnalisé"
+
+#: admin/tools.php:53
+msgid "Custom shorten"
+msgstr "Raccourci personnalisé"
+
+#: admin/tools.php:54
+msgid "Instant Custom Shorten"
+msgstr "Raccourci personnalisé instantané"
+
+#: admin/tools.php:59
+msgid "Social Bookmarklets"
+msgstr "Bookmarklet pour réseaux sociaux"
+
+#: admin/tools.php:61
+msgid "Create a short URL and share it on social networks, all in one click!"
+msgstr ""
+"Créez une URL courte et partagez la sur les réseaux sociaux, en un seul "
+"clic&nbsp;!"
+
+#: admin/tools.php:64
+msgid "Shorten and share:"
+msgstr "Raccourcir et partager&nbsp;:"
+
+#: admin/tools.php:68
+msgid "YOURLS &amp; Facebook"
+msgstr "YOURLS &amp; Facebook"
+
+#: admin/tools.php:70
+msgid "YOURLS &amp; Twitter"
+msgstr "YOURLS &amp; Twitter"
+
+#: admin/tools.php:72
+msgid "YOURLS &amp; Tumblr"
+msgstr "YOURLS &amp; Tumblr"
+
+#: admin/tools.php:80
+msgid "Prefix-n-Shorten"
+msgstr "Préfixer-Raccourcir"
+
+#: admin/tools.php:82
+#, php-format
+msgid ""
+"When viewing a page, you can also prefix its full URL: just head to your "
+"browser's address bar, add \"<span>%s</span>\" to the beginning of the "
+"current URL (right before its 'http://' part) and hit enter."
+msgstr ""
+"Lorsque vous visitez une page, vous pouvez préfixer son URL : dans la bar "
+"d'adresse de votre navigateur, ajoutez \"<span>%s</span>\" au début de l'URL "
+"(juste avant le 'http://') et appuyez sur Entrée."
+
+#: admin/tools.php:85
+msgid ""
+"Note: this will probably not work if your web server is running on Windows"
+msgstr ""
+"Remarque : cela ne marchera pas si votre serveur web fonctionne sous Windows"
+
+#: admin/tools.php:87
+msgid " (which seems to be the case here)"
+msgstr " (ce qui semble être le cas ici)"
+
+#: admin/tools.php:93
+msgid "Secure passwordless API call"
+msgstr "Utilisation de l'API sécurisée sans mot de passe"
+
+#: admin/tools.php:96
+msgid ""
+"YOURLS allows API calls the old fashioned way, using <tt>username</tt> and "
+"<tt>password</tt> parameters."
+msgstr ""
+"YOURLS permet d'utiliser son API de manière traditionnelle, en utilisant vos "
+"<tt>identifiant</tt> et <tt>mot de passe</tt>."
+
+#: admin/tools.php:98
+msgid ""
+"If you're worried about sending your credentials into the wild, you can also "
+"make API calls without using your login or your password, using a secret "
+"signature token."
+msgstr ""
+"Si cela vous embête d'envoyer ces informations sensibles dans la nature, "
+"vous pouvez également utiliser l'API sans utiliser votre identifiant et mot "
+"de passe, grâce à une signature secrète."
+
+#: admin/tools.php:102
+#, php-format
+msgid "Your secret signature token: <strong><code>%s</code></strong>"
+msgstr "Votre signature secrète : <strong><code>%s</code></strong>"
+
+#: admin/tools.php:103
+msgid "(It's a secret. Keep it secret) "
+msgstr "(C'est un secret. Gardez le pour vous)"
+
+#: admin/tools.php:106
+msgid ""
+"This signature token can only be used with the API, not with the admin "
+"interface."
+msgstr ""
+"Cette signature secrète peut être utilisée uniquement avec l'API, et non "
+"pour se connecter à l'interface d'administration."
+
+#: admin/tools.php:109
+msgid "Usage of the signature token"
+msgstr "Utilisation de la signature secrète"
+
+#: admin/tools.php:110
+msgid "Simply use parameter <tt>signature</tt> in your API requests. Example:"
+msgstr ""
+"Utilisez tout simplement le paramètre <tt>signature</tt> dans les requêtes "
+"API. Exemple&nbsp;:"
+
+#: admin/tools.php:114
+msgid "Usage of a time limited signature token"
+msgstr "Utilisation d'une signature à validité limitée dans le temps"
+
+#: admin/tools.php:117 admin/tools.php:119
+msgid "actual value:"
+msgstr "valeur réelle :"
+
+#: admin/tools.php:122
+msgid ""
+"Now use parameters <tt>signature</tt> and <tt>timestamp</tt> in your API "
+"requests. Example:"
+msgstr ""
+"Maintenant utilisez les paramètres <tt>signature</tt> et <tt>timestamp</tt> "
+"dans vos requêtes API. Exemple&nbsp;:"
+
+#: admin/tools.php:124
+msgid "Actual values:"
+msgstr "Valeurs actuelles :"
+
+#: admin/tools.php:126
+#, php-format
+msgid "This URL would be valid for only %s seconds"
+msgstr "Cette URL serait valide pendant seulement %s secondes"
+
+#: admin/tools.php:130
+#, php-format
+msgid "See the <a href=\"%s\">API documentation</a> for more"
+msgstr "Voir la <a href=\"%s\">documentation API</a> pour plus d'informations"
+
+#: admin/upgrade.php:9 admin/upgrade.php:13
+msgid "Upgrade YOURLS"
+msgstr "Mettre à jour YOURLS"
+
+#: admin/upgrade.php:18
+#, php-format
+msgid "Upgrade not required. Go <a href=\"%s\">back to play</a>!"
+msgstr ""
+"Mise à jour non requise. Vous pouvez <a href=\"%s\">retourner jouer</"
+"a>&nbsp;!"
+
+#: admin/upgrade.php:51
+msgid "Your current installation needs to be upgraded."
+msgstr "En l'état actuel, la mise à jour est fortement conseillée."
+
+#: admin/upgrade.php:52
+msgid ""
+"Please, pretty please, it is recommended that you <strong>backup</strong> "
+"your database<br/>(you should do this regularly anyway)"
+msgstr ""
+"S'il vous plaît, <strong>s'il vous plaît</strong>, il est recommandé de "
+"<strong>sauvegarder</strong> votre base de données<br/>(ce que vous devriez "
+"faire régulièrement de toutes façons)"
+
+#: admin/upgrade.php:53
+msgid ""
+"Nothing awful <em>should</em> happen, but this doesn't mean it <em>won't</"
+"em> happen, right? ;)"
+msgstr ""
+"Rien d'horrible ne <em>devrait</em> arriver, mais cela ne veut pas dire que "
+"rien d'horrible ne <em>va</em> arriver, n'est-ce pas&nbsp;? ;)"
+
+#: admin/upgrade.php:54
+msgid ""
+"On every step, if <span class='error'>something goes wrong</span>, you'll "
+"see a message and hopefully a way to fix."
+msgstr ""
+"A chaque étape, si quelque chose <span class='error'>se passe mal</span>, un "
+"message apparaitra expliquant comment corriger le problème."
+
+#: admin/upgrade.php:55
+msgid ""
+"If everything goes too fast and you cannot read, <span class=\"success"
+"\">good for you</span>, let it go :)"
+msgstr ""
+"Si tout va trop vite et que vous n'avez pas le temps de lire, <span class="
+"\"success\">tant mieux</span>, laissez faire :)"
+
+#: admin/upgrade.php:56
+msgid "Once you are ready, press \"Upgrade\" !"
+msgstr "Dès que vous êtes prêt, cliquez sur \"Mettre à jour\"&nbsp;!"
+
+#: admin/upgrade.php:65
+msgid "Upgrade"
+msgstr "Mettre à jour"
+
+#: admin/upgrade.php:77
+msgid "Your installation is now up to date ! "
+msgstr "Votre installation est maintenant à jour&nbsp;!"
+
+#: admin/upgrade.php:78
+#, php-format
+msgid "Go back to <a href=\"%s\">the admin interface</a>"
+msgstr "Retournez à l'<a href=\"%s\">interface d'administration</a>"
+
+#: includes/auth.php:53
+#, php-format
+msgid "Could not auto-encrypt passwords. Error was: \"%s\"."
+msgstr "Impossible de crypter les mots de passe. Erreur&nbsp;: \"%s\"."
+
+#: includes/auth.php:55
+#, php-format
+msgid "<a href=\"%s\">Get help</a>."
+msgstr "<a href=\"%s\">Aide</a>."
+
+#: includes/auth.php:57
+#, php-format
+msgid "<a href=\"%s\">Click here</a> to dismiss this message for one week."
+msgstr ""
+"<a href=\"%s\">Cliquez ici</a> pour supprimer ce message pendant une semaine."
+
+#: includes/class-mysql.php:39
+msgid ""
+"YOURLS requires the mysql, mysqli or pdo_mysql PHP extension. No extension "
+"found. Check your server config, or contact your host."
+msgstr ""
+"YOURLS requiert l'extension PHP mysql, mysqli ou pdo_mysql. Aucune extension "
+"trouvée. Vérifiez la configuration du serveur, ou contactez votre hébergeur."
+
+#: includes/class-mysql.php:40 includes/functions-install.php:16
+#: includes/functions.php:438 includes/functions.php:450
+msgid "Fatal error"
+msgstr "Erreur fatale"
+
+#: includes/functions-auth.php:26
+msgid "Logged out successfully"
+msgstr "Vous êtes déconnecté"
+
+#: includes/functions-auth.php:102
+msgid "Invalid username or password"
+msgstr "Identifiant ou mot de passe incorrects"
+
+#: includes/functions-auth.php:104
+msgid "Please log in"
+msgstr "Merci de vous connecter"
+
+#: includes/functions-html.php:142
+#, php-format
+msgid "1 query"
+msgid_plural "%s queries"
+msgstr[0] "1 requête"
+msgstr[1] "%s requêtes"
+
+#: includes/functions-html.php:147
+#, php-format
+msgid "Powered by %s"
+msgstr "Motorisé par %s"
+
+#: includes/functions-html.php:175
+msgid "Enter the URL"
+msgstr "Entrer l'URL"
+
+#: includes/functions-html.php:176
+msgid "Optional "
+msgstr "Facultatif"
+
+#: includes/functions-html.php:176
+msgid "Custom short URL"
+msgstr "URL courte personnalisée"
+
+#: includes/functions-html.php:178
+msgid "Shorten The URL"
+msgstr "Raccourcir l'URL"
+
+#: includes/functions-html.php:212 includes/functions-html.php:224
+#: includes/functions-html.php:629
+msgid "IP"
+msgstr "IP"
+
+#. //translators: "Search for <input field with text to search> in <select dropdown with URL, title...>"
+#: includes/functions-html.php:216
+#, php-format
+msgid "Search for %1$s in %2$s"
+msgstr "Rechercher %1$s dans %2$s"
+
+#: includes/functions-html.php:230
+msgid "Ascending"
+msgstr "Croissant"
+
+#: includes/functions-html.php:231
+msgid "Descending"
+msgstr "Décroissant"
+
+#. //translators: "Order by <criteria dropdown (date, clicks...)> in <order dropdown (Descending or Ascending)>"
+#: includes/functions-html.php:235
+#, php-format
+msgid "Order by %1$s %2$s"
+msgstr "Classer par %1$s %2$s"
+
+#. //translators: "Show <text field> rows"
+#: includes/functions-html.php:240
+#, php-format
+msgid "Show %s rows"
+msgstr "Afficher %s lignes"
+
+#: includes/functions-html.php:245
+msgid "more"
+msgstr "plus"
+
+#: includes/functions-html.php:246
+msgid "less"
+msgstr "moins"
+
+#. //translators: "Show links with <more/less> than <text field> clicks"
+#: includes/functions-html.php:251
+#, php-format
+msgid "Show links with %1$s than %2$s clicks"
+msgstr "Afficher les liens avec %1$s de %2$s visites"
+
+#: includes/functions-html.php:256
+msgid "before"
+msgstr "avant le"
+
+#: includes/functions-html.php:257
+msgid "after"
+msgstr "après le"
+
+#: includes/functions-html.php:258
+msgid "between"
+msgstr "entre le"
+
+#. //translators: "Show links created <before/after/between> <date input> <"and" if applicable> <date input if applicable>"
+#: includes/functions-html.php:265
+#, php-format
+msgid "Show links created %1$s %2$s %3$s %4$s"
+msgstr "Voir les liens créés %1$s %2$s %3$s %4$s"
+
+#: includes/functions-html.php:269
+msgid "Search"
+msgstr "Rechercher"
+
+#: includes/functions-html.php:271
+msgid "Clear"
+msgstr "Effacer"
+
+#: includes/functions-html.php:291
+#, php-format
+msgid "1 page"
+msgid_plural "%s pages"
+msgstr[0] "1 page"
+msgstr[1] "%s pages"
+
+#: includes/functions-html.php:299 includes/functions-html.php:313
+msgid "Go to First Page"
+msgstr "Aller à la première page"
+
+#: includes/functions-html.php:299
+msgid "&laquo; First"
+msgstr "&laquo; Première"
+
+#: includes/functions-html.php:313
+msgid "Last &raquo;"
+msgstr "Dernière &raquo;"
+
+#: includes/functions-html.php:357
+msgid "Your short link"
+msgstr "Votre lien court"
+
+#: includes/functions-html.php:388
+msgid "Long link"
+msgstr "Lien long"
+
+#: includes/functions-html.php:390 includes/functions-html.php:499
+#: includes/functions-html.php:500
+msgid "Stats"
+msgstr "Statistiques"
+
+#: includes/functions-html.php:404
+msgid "Share with"
+msgstr "Partager avec"
+
+#: includes/functions-html.php:405
+msgid "Tweet this!"
+msgstr "Tweetez-le&nbsp;!"
+
+#: includes/functions-html.php:406
+msgid "Share on Facebook"
+msgstr "Partager sur Facebook"
+
+#: includes/functions-html.php:407
+msgid "Share on Friendfeed"
+msgstr "Partager sur Friendfeed"
+
+#: includes/functions-html.php:464
+msgid "Save"
+msgstr "Sauver"
+
+#: includes/functions-html.php:464
+msgid "Save new values"
+msgstr "Sauver les nouvelles valeurs"
+
+#: includes/functions-html.php:464
+msgid "Cancel"
+msgstr "Annuler"
+
+#: includes/functions-html.php:464
+msgid "Cancel editing"
+msgstr "Annuler l'édition"
+
+#: includes/functions-html.php:466
+msgid "Error, URL not found"
+msgstr "Erreur, URL introuvable"
+
+#: includes/functions-html.php:512 includes/functions-html.php:513
+msgid "Edit"
+msgstr "Editer"
+
+#: includes/functions-html.php:519 includes/functions-html.php:520
+msgid "Delete"
+msgstr "Supprimer"
+
+#: includes/functions-html.php:541
+msgid "Not a common link"
+msgstr "Lien inhabituel"
+
+#: includes/functions-html.php:627
+msgid "Original URL"
+msgstr "URL d'origine"
+
+#: includes/functions-html.php:631
+msgid "Actions"
+msgstr "Actions"
+
+#: includes/functions-html.php:697
+msgid "Username"
+msgstr "Identifiant"
+
+#: includes/functions-html.php:701
+msgid "Password"
+msgstr "Mot de passe"
+
+#: includes/functions-html.php:705
+msgid "Login"
+msgstr "Connexion"
+
+#: includes/functions-html.php:723 user/themes/full-bootstrap/theme.php:87
+#, php-format
+msgid "Hello <strong>%s</strong>"
+msgstr "Salut <strong>%s</strong>"
+
+#: includes/functions-html.php:723 user/themes/full-bootstrap/theme.php:87
+msgid "Logout"
+msgstr "Déconnexion"
+
+#: includes/functions-html.php:727
+msgid "Help"
+msgstr "Aide"
+
+#: includes/functions-html.php:734
+msgid "Go to the admin interface"
+msgstr "Aller à l'interface d'administration"
+
+#: includes/functions-html.php:735
+msgid "Admin interface"
+msgstr "Interface d'administration"
+
+#: includes/functions-html.php:741
+msgid "Tools"
+msgstr "Outils"
+
+#: includes/functions-html.php:867 includes/functions-html.php:872
+msgid "Today"
+msgstr "Aujourd'hui"
+
+#: includes/functions-html.php:868 includes/functions-html.php:873
+msgid "Close"
+msgstr "Fermer"
+
+#: includes/functions-html.php:889
+#, php-format
+msgid "<a href=\"%s\">YOURLS version %s</a> is available. Please update!"
+msgstr ""
+"<a href=\"%s\">YOURLS version %s</a> est disponible. Merci de mettre à jour!"
+
+#: includes/functions-install.php:16 includes/functions.php:438
+msgid "Incorrect DB config, or could not connect to DB"
+msgstr ""
+"Configuration pour la base de données incorrecte, ou erreur de connexion à "
+"la base"
+
+#: includes/functions-install.php:241
+#, php-format
+msgid "Table '%s' created."
+msgstr "Table '%s' créée."
+
+#: includes/functions-install.php:243
+#, php-format
+msgid "Error creating table '%s'."
+msgstr "Erreur lors de la création de la table '%s'."
+
+#: includes/functions-install.php:249
+msgid "Could not initialize options"
+msgstr "Impossible d'initialiser les options"
+
+#: includes/functions-install.php:253
+msgid "Could not insert sample short URLs"
+msgstr "Impossible de créer les URL courtes d'exemple"
+
+#: includes/functions-install.php:257
+msgid "YOURLS tables successfully created."
+msgstr "Tables des données de YOURLS créées avec succès."
+
+#: includes/functions-install.php:259
+msgid "Error creating YOURLS tables."
+msgstr "Erreur lors de la création des tables de YOURLS."
+
+#. //translators: weekday
+#: includes/functions-l10n.php:795 includes/functions-l10n.php:805
+#: includes/functions-l10n.php:818
+msgid "Sunday"
+msgstr "Dimanche"
+
+#. //translators: weekday
+#: includes/functions-l10n.php:796 includes/functions-l10n.php:806
+#: includes/functions-l10n.php:819
+msgid "Monday"
+msgstr "Lundi"
+
+#. //translators: weekday
+#: includes/functions-l10n.php:797 includes/functions-l10n.php:807
+#: includes/functions-l10n.php:820
+msgid "Tuesday"
+msgstr "Mardi"
+
+#. //translators: weekday
+#: includes/functions-l10n.php:798 includes/functions-l10n.php:808
+#: includes/functions-l10n.php:821
+msgid "Wednesday"
+msgstr "Mercredi"
+
+#. //translators: weekday
+#: includes/functions-l10n.php:799 includes/functions-l10n.php:809
+#: includes/functions-l10n.php:822
+msgid "Thursday"
+msgstr "Jeudi"
+
+#. //translators: weekday
+#: includes/functions-l10n.php:800 includes/functions-l10n.php:810
+#: includes/functions-l10n.php:823
+msgid "Friday"
+msgstr "Vendredi"
+
+#. //translators: weekday
+#: includes/functions-l10n.php:801 includes/functions-l10n.php:811
+#: includes/functions-l10n.php:824
+msgid "Saturday"
+msgstr "Samedi"
+
+#. //translators: one-letter abbreviation of the weekday
+#: includes/functions-l10n.php:805
+msgid "S_Sunday_initial"
+msgstr "D"
+
+#. //translators: one-letter abbreviation of the weekday
+#: includes/functions-l10n.php:806
+msgid "M_Monday_initial"
+msgstr "L"
+
+#. //translators: one-letter abbreviation of the weekday
+#: includes/functions-l10n.php:807
+msgid "T_Tuesday_initial"
+msgstr "Ma"
+
+#. //translators: one-letter abbreviation of the weekday
+#: includes/functions-l10n.php:808
+msgid "W_Wednesday_initial"
+msgstr "Me"
+
+#. //translators: one-letter abbreviation of the weekday
+#: includes/functions-l10n.php:809
+msgid "T_Thursday_initial"
+msgstr "J"
+
+#. //translators: one-letter abbreviation of the weekday
+#: includes/functions-l10n.php:810
+msgid "F_Friday_initial"
+msgstr "V"
+
+#. //translators: one-letter abbreviation of the weekday
+#: includes/functions-l10n.php:811
+msgid "S_Saturday_initial"
+msgstr "S"
+
+#. //translators: three-letter abbreviation of the weekday
+#: includes/functions-l10n.php:818
+msgid "Sun"
+msgstr "Dim"
+
+#. //translators: three-letter abbreviation of the weekday
+#: includes/functions-l10n.php:819
+msgid "Mon"
+msgstr "Lun"
+
+#. //translators: three-letter abbreviation of the weekday
+#: includes/functions-l10n.php:820
+msgid "Tue"
+msgstr "Mar"
+
+#. //translators: three-letter abbreviation of the weekday
+#: includes/functions-l10n.php:821
+msgid "Wed"
+msgstr "Mer"
+
+#. //translators: three-letter abbreviation of the weekday
+#: includes/functions-l10n.php:822
+msgid "Thu"
+msgstr "Jeu"
+
+#. //translators: three-letter abbreviation of the weekday
+#: includes/functions-l10n.php:823
+msgid "Fri"
+msgstr "Ven"
+
+#. //translators: three-letter abbreviation of the weekday
+#: includes/functions-l10n.php:824
+msgid "Sat"
+msgstr "Sam"
+
+#. //translators: month name
+#: includes/functions-l10n.php:827 includes/functions-l10n.php:842
+msgid "January"
+msgstr "Janvier"
+
+#. //translators: month name
+#: includes/functions-l10n.php:828 includes/functions-l10n.php:843
+msgid "February"
+msgstr "Février"
+
+#. //translators: month name
+#: includes/functions-l10n.php:829 includes/functions-l10n.php:844
+msgid "March"
+msgstr "Mars"
+
+#. //translators: month name
+#: includes/functions-l10n.php:830 includes/functions-l10n.php:845
+msgid "April"
+msgstr "Avril"
+
+#. //translators: month name
+#: includes/functions-l10n.php:831 includes/functions-l10n.php:846
+msgid "May"
+msgstr "Mai"
+
+#. //translators: month name
+#: includes/functions-l10n.php:832 includes/functions-l10n.php:847
+msgid "June"
+msgstr "Juin"
+
+#. //translators: month name
+#: includes/functions-l10n.php:833 includes/functions-l10n.php:848
+msgid "July"
+msgstr "Juillet"
+
+#. //translators: month name
+#: includes/functions-l10n.php:834 includes/functions-l10n.php:849
+msgid "August"
+msgstr "Août"
+
+#. //translators: month name
+#: includes/functions-l10n.php:835 includes/functions-l10n.php:850
+msgid "September"
+msgstr "Septembre"
+
+#. //translators: month name
+#: includes/functions-l10n.php:836 includes/functions-l10n.php:851
+msgid "October"
+msgstr "Octobre"
+
+#. //translators: month name
+#: includes/functions-l10n.php:837 includes/functions-l10n.php:852
+msgid "November"
+msgstr "Novembre"
+
+#. //translators: month name
+#: includes/functions-l10n.php:838 includes/functions-l10n.php:853
+msgid "December"
+msgstr "Décembre"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:842
+msgid "Jan_January_abbreviation"
+msgstr "Jan"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:843
+msgid "Feb_February_abbreviation"
+msgstr "Fév"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:844
+msgid "Mar_March_abbreviation"
+msgstr "Mar"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:845
+msgid "Apr_April_abbreviation"
+msgstr "Avr"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:846
+msgid "May_May_abbreviation"
+msgstr "Mai"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:847
+msgid "Jun_June_abbreviation"
+msgstr "Juin"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:848
+msgid "Jul_July_abbreviation"
+msgstr "Juil"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:849
+msgid "Aug_August_abbreviation"
+msgstr "Août"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:850
+msgid "Sep_September_abbreviation"
+msgstr "Sep"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:851
+msgid "Oct_October_abbreviation"
+msgstr "Oct"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:852
+msgid "Nov_November_abbreviation"
+msgstr "Nov"
+
+#. //translators: three-letter abbreviation of the month
+#: includes/functions-l10n.php:853
+msgid "Dec_December_abbreviation"
+msgstr "Déc"
+
+#: includes/functions-l10n.php:860
+msgid "am"
+msgstr "am"
+
+#: includes/functions-l10n.php:861
+msgid "pm"
+msgstr "pm"
+
+#: includes/functions-l10n.php:862
+msgid "AM"
+msgstr "AM"
+
+#: includes/functions-l10n.php:863
+msgid "PM"
+msgstr "PM"
+
+#. //translators: $thousands_sep argument for http://php.net/number_format, default is ,
+#: includes/functions-l10n.php:869
+msgid "number_format_thousands_sep"
+msgstr " "
+
+#. //translators: $dec_point argument for http://php.net/number_format, default is .
+#: includes/functions-l10n.php:873
+msgid "number_format_decimal_point"
+msgstr ","
+
+#. //translators: 'rtl' or 'ltr'. This sets the text direction for YOURLS.
+#: includes/functions-l10n.php:880
+msgid "ltr"
+msgstr "ltr"
+
+#: includes/functions-plugins.php:387
+msgid "Could not find and deactivated plugin :"
+msgid_plural "Could not find and deactivated plugins :"
+msgstr[0] "Plugin introuvable et désactivé&nbsp;:"
+msgstr[1] "Plugins introuvables et désactivés&nbsp;:"
+
+#: includes/functions-plugins.php:425
+msgid "Not a valid plugin file"
+msgstr "Ce n'est pas un fichier plugin valide"
+
+#: includes/functions-plugins.php:430
+msgid "Plugin already activated"
+msgstr "Plugin déjà activé"
+
+#: includes/functions-plugins.php:438
+#, php-format
+msgid "Plugin generated unexpected output. Error was: <br/><pre>%s</pre>"
+msgstr "Le plugin a généré une erreur inattendue&nbsp;: <br/><pre>%s</pre>"
+
+#: includes/functions-plugins.php:461
+msgid "Plugin not active"
+msgstr "Plugin inactif"
+
+#: includes/functions-plugins.php:541
+msgid ""
+"This page does not exist. Maybe a plugin you thought was activated is "
+"inactive?"
+msgstr ""
+"Cette page n'existe pas. Un plugin que vous pensiez actif est peut-être "
+"désactivé&nbsp;?"
+
+#: includes/functions-plugins.php:541
+msgid "Invalid link"
+msgstr "Lien invalide"
+
+#: includes/functions.php:201
+msgid "Missing or malformed URL"
+msgstr "URL manquante ou invalide"
+
+#: includes/functions.php:215
+msgid "URL is a short URL"
+msgstr "L'URL est une URL courte"
+
+#: includes/functions.php:247
+#, php-format
+msgid "Short URL %s already exists in database or is reserved"
+msgstr ""
+"L'URL courte %s existe déjà dans la base de données ou bien est réservée"
+
+#. //translators: eg "http://someurl/ added to DB"
+#: includes/functions.php:253 includes/functions.php:275
+#, php-format
+msgid "%s added to database"
+msgstr "%s ajouté à la base de données"
+
+#: includes/functions.php:283
+msgid "Error saving url to database"
+msgstr "Erreur lors de l'enregistrement dans la base de données"
+
+#. //translators: eg "http://someurl/ already exists"
+#: includes/functions.php:300
+#, php-format
+msgid "%s already exists in database"
+msgstr "%s existe déjà dans la base de données"
+
+#: includes/functions.php:355
+msgid "Link updated in database"
+msgstr "Lien mis à jour"
+
+#. //translators: "Error updating http://someurl/ (Shorturl: http://sho.rt/blah)"
+#: includes/functions.php:358
+#, php-format
+msgid "Error updating %s (Short URL: %s)"
+msgstr "Erreur lors de la mise à jour de %s (URL courte : %s)"
+
+#: includes/functions.php:364
+msgid "URL or keyword already exists in database"
+msgstr "L'URL ou le mot clé existe déjà dans la base de données"
+
+#: includes/functions.php:761
+#, php-format
+msgid ""
+"if you are not redirected after 10 seconds, please <a href=\"%s\">click "
+"here</a>"
+msgstr ""
+"Si vous n'êtes pas redirigé après 10 secondes, merci de <a href=\"%s"
+"\">cliquer ici</a>"
+
+#: includes/functions.php:769
+#, php-format
+msgid "Please <a href=\"%s\">click here</a>"
+msgstr "Merci de <a href=\"%s\">cliquer ici</a>"
+
+#: includes/functions.php:1394
+msgid "Too many URLs added too fast. Slow down please."
+msgstr "Trop d'URL ajoutées trop vite. Levez le pied s'il vous plaît."
+
+#: includes/functions.php:1394
+msgid "Forbidden"
+msgstr "Interdit"
+
+#: includes/functions.php:1673
+msgid "Unauthorized action or expired link"
+msgstr "Action non autorisée ou lien périmé"
+
+#: includes/functions.php:1673
+msgid "Error"
+msgstr "Erreur"
+
+#: includes/functions.php:2064
+msgid "Service temporarily unavailable"
+msgstr "Service temporairement indisponible"
+
+#: includes/functions.php:2065
+msgid "Our service is currently undergoing scheduled maintenance."
+msgstr "Notre service est en cours de maintenance."
+
+#: includes/functions.php:2066
+msgid ""
+"Things should not last very long, thank you for your patience and please "
+"excuse the inconvenience"
+msgstr "Cela ne devrait pas durer trop longtemps, merci de votre patience."
+
+#: includes/functions.php:2186
+#, php-format
+msgid ""
+"%1$s is <strong>deprecated</strong> since version %2$s! Use %3$s instead."
+msgstr ""
+"%1$s est <strong>obsolète</strong> depuis la version %2$s&nbsp;! Utilisez "
+"%3$s à la place."
+
+#: includes/functions.php:2188
+#, php-format
+msgid ""
+"%1$s is <strong>deprecated</strong> since version %2$s with no alternative "
+"available."
+msgstr ""
+"%1$s est <strong>obsolète</strong> depuis la version %2$s, sans alternative "
+"disponible."
+
+#: user/plugins/sample-toolbar/plugin.php:62
+msgid "day"
+msgid_plural "days"
+msgstr[0] "jour"
+msgstr[1] "jours"
+
+#: user/plugins/sample-toolbar/plugin.php:67
+msgid "view"
+msgid_plural "views"
+msgstr[0] "vue"
+msgstr[1] "vues"
