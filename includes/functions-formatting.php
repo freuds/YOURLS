@@ -19,7 +19,7 @@ function yourls_int2string( $num, $chars = null ) {
 		$string = $chars[ $mod ] . $string;
 	}
 	$string = $chars[ intval( $num ) ] . $string;
-	
+
 	return yourls_apply_filter( 'int2string', $string, $num, $chars );
 }
 
@@ -57,8 +57,8 @@ function yourls_string2htmlid( $string ) {
 function yourls_sanitize_string( $string ) {
 	// make a regexp pattern with the shorturl charset, and remove everything but this
 	$pattern = yourls_make_regexp_pattern( yourls_get_shorturl_charset() );
-	$valid = substr( preg_replace( '![^'.$pattern.']!', '', $string ), 0, 199 );
-	
+	$valid = (string) substr( preg_replace( '![^'.$pattern.']!', '', $string ), 0, 199 );
+
 	return yourls_apply_filter( 'sanitize_string', $valid, $string );
 }
 
@@ -83,16 +83,18 @@ function yourls_sanitize_title( $unsafe_title, $fallback = '' ) {
 	$title = $unsafe_title;
 	$title = strip_tags( $title );
 	$title = preg_replace( "/\s+/", ' ', trim( $title ) );
-    
+
     if ( '' === $title || false === $title ) {
         $title = $fallback;
     }
-    
+
 	return yourls_apply_filter( 'sanitize_title', $title, $unsafe_title, $fallback );
 }
 
 /**
- * A few sanity checks on the URL. Used for redirection or DB. For display purpose, see yourls_esc_url()
+ * A few sanity checks on the URL. Used for redirection or DB.
+ * For redirection when you don't trust the URL ($_SERVER variable, query string), see yourls_sanitize_url_safe()
+ * For display purpose, see yourls_esc_url()
  *
  * @param string $unsafe_url unsafe URL
  * @param array $protocols Optional allowed protocols, default to global $yourls_allowedprotocols
@@ -101,6 +103,25 @@ function yourls_sanitize_title( $unsafe_title, $fallback = '' ) {
 function yourls_sanitize_url( $unsafe_url, $protocols = array() ) {
 	$url = yourls_esc_url( $unsafe_url, 'redirection', $protocols );
 	return yourls_apply_filter( 'sanitize_url', $url, $unsafe_url );
+}
+
+/**
+ * A few sanity checks on the URL, including CRLF. Used for redirection when URL to be sanitized is critical and cannot be trusted.
+ *
+ * Use when critical URL comes from user input or environment variable. In such a case, this function will sanitize
+ * it like yourls_sanitize_url() but will also remove %0A and %0D to prevent CRLF injection.
+ * Still, some legit URLs contain %0A or %0D (see issue 2056, and for extra fun 1694, 1707, 2030, and maybe others)
+ * so we're not using this function unless it's used for internal redirection when the target location isn't
+ * hardcoded, to avoid XSS via CRLF
+ *
+ * @since 1.7.2
+ * @param string $unsafe_url unsafe URL
+ * @param array $protocols Optional allowed protocols, default to global $yourls_allowedprotocols
+ * @return string Safe URL
+ */
+function yourls_sanitize_url_safe( $unsafe_url, $protocols = array() ) {
+	$url = yourls_esc_url( $unsafe_url, 'safe', $protocols );
+	return yourls_apply_filter( 'sanitize_url_safe', $url, $unsafe_url );
 }
 
 /**
@@ -120,7 +141,7 @@ function yourls_deep_replace( $search, $subject ){
 			}
 		}
 	}
-	
+
 	return $subject;
 }
 
@@ -128,51 +149,8 @@ function yourls_deep_replace( $search, $subject ){
  * Make sure an integer is a valid integer (PHP's intval() limits to too small numbers)
  *
  */
-function yourls_sanitize_int( $in ) {
-	return ( substr( preg_replace( '/[^0-9]/', '', strval( $in ) ), 0, 20 ) );
-}
-
-/**
- * Escape a string or an array of strings before DB usage. ALWAYS escape before using in a SQL query. Thanks.
- *
- * @param string|array $data string or array of strings to be escaped
- * @return string|array escaped data
- */
-function yourls_escape( $data ) {
-	if( is_array( $data ) ) {
-		foreach( $data as $k => $v ) {
-			if( is_array( $v ) ) {
-				$data[ $k ] = yourls_escape( $v );
-			} else {
-				$data[ $k ] = yourls_escape_real( $v );
-			}
-		}
-	} else {
-		$data = yourls_escape_real( $data );
-	}
-	
-	return $data;
-}
-
-/**
- * "Real" escape. This function should NOT be called directly. Use yourls_escape() instead. 
- *
- * This function uses a "real" escape if possible, using PDO, MySQL or MySQLi functions,
- * with a fallback to a "simple" addslashes
- * If you're implementing a custom DB engine or a custom cache system, you can define an
- * escape function using filter 'custom_escape_real'
- *
- * @since 1.7
- * @param string $a string to be escaped
- * @return string escaped string
- */
-function yourls_escape_real( $string ) {
-	global $ydb;
-	if( isset( $ydb ) && ( $ydb instanceof ezSQLcore ) )
-		return $ydb->escape( $string );
-	
-	// YOURLS DB classes have been bypassed by a custom DB engine or a custom cache layer
-	return yourls_apply_filter( 'custom_escape_real', addslashes( $string ), $string );	
+function yourls_sanitize_int( $int ) {
+	return ( substr( preg_replace( '/[^0-9]/', '', strval( $int ) ), 0, 20 ) );
 }
 
 /**
@@ -211,7 +189,7 @@ function yourls_sanitize_date_for_sql( $date ) {
 function yourls_trim_long_string( $string, $length = 60, $append = '[...]' ) {
 	$newstring = $string;
     if ( mb_strlen( $newstring ) > $length ) {
-        $newstring = mb_substr( $newstring, 0, $length - mb_strlen( $append ), 'UTF-8' ) . $append;	
+        $newstring = mb_substr( $newstring, 0, $length - mb_strlen( $append ), 'UTF-8' ) . $append;
     }
 	return yourls_apply_filter( 'trim_long_string', $newstring, $string, $length, $append );
 }
@@ -219,13 +197,19 @@ function yourls_trim_long_string( $string, $length = 60, $append = '[...]' ) {
 /**
  * Sanitize a version number (1.4.1-whatever-RC1 -> 1.4.1)
  *
+ * The regexp searches for the first digits, then a period, then more digits and periods, and discards
+ * all the rest.
+ * For instance, 'mysql-5.5-beta' and '5.5-RC1' return '5.5'
+ *
  * @since 1.4.1
- * @param string $ver Version number
- * @return string Sanitized version number
+ * @param  string $version  Version number
+ * @return string           Sanitized version number
  */
-function yourls_sanitize_version( $ver ) {
-	preg_match( '/(^[0-9.]+).*$/', $ver, $matches );
-    return isset( $matches[1] ) ? trim( $matches[1], '.' ) : '';
+function yourls_sanitize_version( $version ) {
+    preg_match( '/([0-9]+\.[0-9.]+).*$/', $version, $matches );
+    $version = isset($matches[1]) ? trim($matches[1], '.') : '';
+
+    return $version;
 }
 
 /**
@@ -275,7 +259,7 @@ function yourls_seems_utf8( $str ) {
 function yourls_supports_pcre_u() {
     static $utf8_pcre;
     if( !isset( $utf8_pcre ) ) {
-        $utf8_pcre = (bool) @preg_match( '/^./u', 'a' );   
+        $utf8_pcre = (bool) @preg_match( '/^./u', 'a' );
     }
     return $utf8_pcre;
 }
@@ -479,6 +463,9 @@ function yourls_esc_attr( $text ) {
  * A number of characters are removed from the URL. If the URL is for displaying
  * (the default behaviour) ampersands are also replaced.
  *
+ * This function by default "escapes" URL for display purpose (param $context = 'display') but can
+ * take extra steps in URL sanitization. See yourls_sanitize_url() and yourls_sanitize_url_safe()
+ *
  * @since 1.6
  *
  * @param string $url The URL to be cleaned.
@@ -489,9 +476,9 @@ function yourls_esc_attr( $text ) {
 function yourls_esc_url( $url, $context = 'display', $protocols = array() ) {
     // trim first -- see #1931
     $url = trim( $url );
-    
+
 	// make sure there's only one 'http://' at the beginning (prevents pasting a URL right after the default 'http://')
-	$url = str_replace( 
+	$url = str_replace(
 		array( 'http://http://', 'http://https://' ),
 		array( 'http://',        'https://'        ),
 		$url
@@ -512,9 +499,13 @@ function yourls_esc_url( $url, $context = 'display', $protocols = array() ) {
 	$url = preg_replace( '|[^a-z0-9-~+_.?#=!&;,/:%@$\|*\'()\[\]\\x80-\\xff]|i', '', $url );
 	// Previous regexp in YOURLS was '|[^a-z0-9-~+_.?\[\]\^#=!&;,/:%@$\|*`\'<>"()\\x80-\\xff\{\}]|i'
 	// TODO: check if that was it too destructive
-	$strip = array( '%0d', '%0a', '%0D', '%0A' );
-	$url = yourls_deep_replace( $strip, $url );
-	$url = str_replace( ';//', '://', $url );
+
+    // If $context is 'safe', an extra step is taken to make sure no CRLF injection is possible.
+    // To be used when $url can be forged by evil user (eg it's from a $_SERVER variable, a query string, etc..)
+	if ( 'safe' == $context ) {
+        $strip = array( '%0d', '%0a', '%0D', '%0A' );
+        $url = yourls_deep_replace( $strip, $url );
+    }
 
 	// Replace ampersands and single quotes only when displaying.
 	if ( 'display' == $context ) {
@@ -522,7 +513,7 @@ function yourls_esc_url( $url, $context = 'display', $protocols = array() ) {
 		$url = str_replace( '&amp;', '&#038;', $url );
 		$url = str_replace( "'", '&#039;', $url );
 	}
-	
+
 	if ( ! is_array( $protocols ) or ! $protocols ) {
 		global $yourls_allowedprotocols;
 		$protocols = yourls_apply_filter( 'esc_url_protocols', $yourls_allowedprotocols );
@@ -531,7 +522,7 @@ function yourls_esc_url( $url, $context = 'display', $protocols = array() ) {
 
 	if ( !yourls_is_allowed_protocol( $url, $protocols ) )
 		return '';
-	
+
 	// I didn't use KSES function kses_bad_protocol() because it doesn't work the way I liked (returns //blah from illegal://blah)
 
 	return yourls_apply_filter( 'esc_url', $url, $original_url, $context );
@@ -542,7 +533,7 @@ function yourls_esc_url( $url, $context = 'display', $protocols = array() ) {
  * Lowercase scheme and domain of an URI - see issues 591, 1630, 1889
  *
  * This function is trickier than what seems to be needed at first
- * 
+ *
  * First, we need to handle several URI types: http://example.com, mailto:ozh@ozh.ozh, facetime:user@example.com, and so on, see
  * yourls_kses_allowed_protocols() in functions-kses.php
  * The general rule is that the scheme ("stuff://" or "stuff:") is case insensitive and should be lowercase. But then, depending on the
@@ -570,54 +561,43 @@ function yourls_esc_url( $url, $context = 'display', $protocols = array() ) {
 function yourls_lowercase_scheme_domain( $url ) {
     $scheme = yourls_get_protocol( $url );
 
-    if( '' == $scheme ) {
+    if ('' == $scheme) {
         // Scheme not found, malformed URL? Something else? Not sure.
         return $url;
     }
 
-    // Case 1 : scheme like "stuff://" (eg "http://example.com/" or "ssh://joe@joe.com")
-    if( substr( $scheme, -2, 2 ) == '//' ) {
-
-        $parts = parse_url( $url );
-
-        // Most likely malformed stuff, could not parse : we'll just lowercase the scheme and leave the rest untouched
-        if( false == $parts ) {
-            $url = str_replace( $scheme, strtolower( $scheme ), $url );
-
-        // URL seems parsable, let's do the best we can
-        } else {
-
-            $lower = array();
-
-            $lower['scheme'] = strtolower( $parts['scheme'] );
-
-            if( isset( $parts['host'] ) ) { 
-                $lower['host'] = strtolower( $parts['host'] );
-            } else {
-                $parts['host'] = '***';
-            }
-
-            // We're not going to glue back things that could be modified in the process            
-            unset( $parts['path'] );
-            unset( $parts['query'] );
-            unset( $parts['fragment'] );
-
-            // original beginning of the URL and its lowercase-where-needed counterpart
-            // We trim the / after the domain to avoid avoid "http://example.com" being reconstructed as "http://example.com/"
-            $partial_original_url       = trim( http_build_url( $parts ), '/' );
-            $partial_lower_original_url = trim( http_build_url( $parts, $lower ), '/' );
-
-            $url = str_replace( $partial_original_url , $partial_lower_original_url, $url );
-
-        }
-
-    // Case 2 : scheme like "stuff:" (eg "mailto:joe@joe.com" or "bitcoin:15p1o8vnWqNkJBJGgwafNgR1GCCd6EGtQR?amount=1&label=Ozh")
-    // In this case, we only lowercase the scheme, because depending on it, things after should or should not be lowercased
-    } else {
-
+    /**
+     * Case 1 : scheme like "stuff:", as opposed to "stuff://"
+     * Examples: "mailto:joe@joe.com" or "bitcoin:15p1o8vnWqNkJBJGgwafNgR1GCCd6EGtQR?amount=1&label=Ozh"
+     * In this case, we only lowercase the scheme, because depending on it, things after should or should not be lowercased
+     */
+    if (substr($scheme, -2, 2) != '//') {
         $url = str_replace( $scheme, strtolower( $scheme ), $url );
-
+        return $url;
     }
+
+    /**
+     * Case 2 : scheme like "stuff://" (eg "http://example.com/" or "ssh://joe@joe.com")
+     * Here we lowercase the scheme and domain parts
+     */
+    $parts = parse_url($url);
+
+    // Most likely malformed stuff, could not parse : we'll just lowercase the scheme and leave the rest untouched
+    if (false == $parts) {
+        $url = str_replace( $scheme, strtolower( $scheme ), $url );
+        return $url;
+    }
+
+    // URL seems parsable, let's do the best we can
+    $lower = array();
+    $lower['scheme'] = strtolower( $parts['scheme'] );
+    if( isset( $parts['host'] ) ) {
+        $lower['host'] = strtolower( $parts['host'] );
+    } else {
+        $parts['host'] = '***';
+    }
+
+    $url = http_build_url($url, $lower);
 
     return $url;
 }
@@ -735,10 +715,6 @@ function yourls_rawurldecode_while_encoded( $string ) {
  * @return string        Bookmarklet link
  */
 function yourls_make_bookmarklet( $code ) {
-    if ( !class_exists( 'BookmarkletGen', false ) ) {
-        require_once YOURLS_INC . '/BookmarkletGen/BookmarkletGen.php';
-    }
-
-    $book = new BookmarkletGen;
+    $book = new \Ozh\Bookmarkletgen\Bookmarkletgen;
     return $book->crunch( $code );
 }
