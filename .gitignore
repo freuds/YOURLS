@@ -11,11 +11,10 @@ user/*
 [Rr]obots.txt
 
 # Languages
-user/languages/*
 !user/languages/
 
 # Plugins
-user/plugins/*
+!user/plugins/
 # Core plugins
 !user/plugins/hyphens-in-urls/
 !user/plugins/random-bg/
