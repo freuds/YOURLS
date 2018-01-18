@@ -120,8 +120,8 @@ echo <<<HTML
 	  					<input type="number" name="expiry_default_age" min="1" max="100" value=$opt[6]>
 						<select name="expiry_default_age_mod" >
 							<option value="min" {$ageMod['min']}>Minute(s)</option>
-							<option value="hour" {$ageMod['day']}>Hour(s)</option>
-							<option value="day" {$ageMod['hour']}>Day(s)</option>
+							<option value="hour" {$ageMod['hour']}>Hour(s)</option>
+							<option value="day" {$ageMod['day']}>Day(s)</option>
 							<option value="week" {$ageMod['week']}>Week(s)</option>
 						</select>
 						<p>If the expiry type is set to 'clock' with no other conditions set, expiry falls back to this value.</p>
@@ -334,7 +334,7 @@ echo <<<HTML
 					<th>Clicks</th>
 					<th>Timer</th>
 					<th>Time Unit</th>
-					<th>PostX Destiantion (optional)</th>
+					<th>PostX Destination (optional)</th>
 
 					<th>&nbsp;</th>
 				</tr>
@@ -492,7 +492,7 @@ function expiry_override_html_addnew( $shunt, $url, $keyword ) {
 					<?php yourls_e( 'Optional '); ?> : <strong><?php yourls_e('Custom short URL'); ?></strong>:<input type="text" id="add-keyword" name="keyword" value="<?php echo $keyword; ?>" class="text" size="8" />
 					<?php yourls_nonce_field( 'add_url', 'nonce-add' ); ?>
 					<input type="button" id="add-button" name="add-button" value="<?php yourls_e( 'Shorten The URL' ); ?>" class="button" onclick="add_link_expiry();" />
-					</br></br>
+					</br>
 					<label for="expiry"><strong>Short Link Expiration Type</strong>:</label>
 					<select name="expiry" id="expiry" data-role="slider" > Select One
 						<option value="" selected="selected">None</option>
@@ -1389,14 +1389,15 @@ function expiry_activated() {
 		yourls_add_option('expiry_init', time());
 		// Create the expiry table
 		$table_expiry  = "CREATE TABLE IF NOT EXISTS expiry (";
-		$table_expiry .= "keyword varchar(200) NOT NULL, ";
+		$table_expiry .= "keyword varchar(200) CHARACTER SET utf8 COLLATE utf8_bin NOT NULL, ";
 		$table_expiry .= "type varchar(5) NOT NULL, ";
-		$table_expiry .= "click varchar(5), ";
+		$table_expiry .= "click varchar(5) DEFAULT NULL, ";
 		$table_expiry .= "timestamp varchar(20), ";
 		$table_expiry .= "shelflife varchar(20), ";
 		$table_expiry .= "postexpire varchar(200), ";
 		$table_expiry .= "PRIMARY KEY (keyword) ";
-		$table_expiry .= ") ENGINE=MyISAM DEFAULT CHARSET=latin1;";
+		$table_expiry .= ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;";
+
 		$tables = $ydb->fetchAffected($table_expiry);
 
 		yourls_update_option('expiry_init', time());
