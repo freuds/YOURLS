@@ -12,15 +12,16 @@ user/*
 # Languages
 !user/languages/
 
-# Plugins
-!user/plugins/
 # Core plugins
 !user/plugins/hyphens-in-urls/
-!user/plugins/random-bg/
 !user/plugins/sample-page/
 !user/plugins/sample-plugin/
-!user/plugins/sample-toolbar/
-!user/plugins/cache-stats-pages/cache/
+
+# Plugins
+!user/plugins/
+
+# ignore plugins cache
+user/plugins/cache-stats-pages/cache/*.html
 
 # Pages
 pages/*
