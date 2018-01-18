@@ -8,7 +8,6 @@ user/*
 .htaccess
 *.config
 *.conf
-[Rr]obots.txt
 
 # Languages
 !user/languages/
@@ -21,6 +20,7 @@ user/*
 !user/plugins/sample-page/
 !user/plugins/sample-plugin/
 !user/plugins/sample-toolbar/
+!user/plugins/cache-stats-pages/cache/
 
 # Pages
 pages/*
