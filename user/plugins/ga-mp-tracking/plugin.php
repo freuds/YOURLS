@@ -10,7 +10,7 @@ License: Creative Commons Attribution 3.0 Unported: https://creativecommons.org/
 */
 
 // Define your own UA
-define("GAID", "UA-33563207-5");
+define("GAID", "UA-112785232-2");
 
 yourls_add_action( 'pre_redirect', 'power_ga_mp' );
 yourls_add_filter('shunt_update_clicks', 'power_ga_mp_trackCurrent');
