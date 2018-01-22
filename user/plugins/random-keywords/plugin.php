@@ -22,7 +22,7 @@ global $ozh_random_keyword;
 */
 
 /* Length of random keyword */
-$ozh_random_keyword['length'] = 8;
+$ozh_random_keyword['length'] = 7;
 
 /*
 * DO NOT EDIT FARTHER
