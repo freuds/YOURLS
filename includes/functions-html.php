@@ -161,7 +161,7 @@ function yourls_html_footer($can_query = true) {
 	<?php if( defined( 'YOURLS_DEBUG' ) && YOURLS_DEBUG == true ) {
 		echo '<div style="text-align:left"><pre>';
 		echo join( "\n", yourls_get_debug_log() );
-		echo '</div>';
+		echo '</pre></div>';
 	} ?>
 	<?php yourls_do_action( 'html_footer', yourls_get_html_context() ); ?>
 	</body>
@@ -249,6 +249,7 @@ function yourls_html_tfooter( $params = array() ) {
 						$_options = array(
 							'keyword'      => yourls__( 'Short URL' ),
 							'url'          => yourls__( 'URL' ),
+							'title'        => yourls__( 'Title' ),
 							'timestamp'    => yourls__( 'Date' ),
 							'ip'           => yourls__( 'IP' ),
 							'clicks'       => yourls__( 'Clicks' ),
