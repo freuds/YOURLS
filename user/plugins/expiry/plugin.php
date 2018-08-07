@@ -849,10 +849,10 @@ function expiry_config() {
 	$int_cust  = yourls_get_option( 'expiry_custom' );
 	$tbl_drop  = yourls_get_option( 'expiry_table_drop' );
 	$expose	   = yourls_get_option( 'expiry_expose' );
-	$gpx	     = yourls_get_option( 'expiry_global_post_expire' );
+	$gpx	   = yourls_get_option( 'expiry_global_post_expire' );
 	$gpx_chk   = yourls_get_option( 'expiry_global_post_expire_chk' );
-	$age	     = yourls_get_option( 'expiry_default_age' );
-	$mod	     = yourls_get_option( 'expiry_default_age_mod' );
+	$age	   = yourls_get_option( 'expiry_default_age' );
+	$mod	   = yourls_get_option( 'expiry_default_age_mod' );
 	$click	   = yourls_get_option( 'expiry_default_click' );
 	$global	   = yourls_get_option( 'expiry_global_expiry' );
 
@@ -861,8 +861,8 @@ function expiry_config() {
 	if($int_cust == null) $int_cust	= 'none';
 	if($tbl_drop == null) $tbl_drop = 'false';
 	if($expose	== null) $expose = 'true';
-	if($gpx	== null) $gfb	= 'none';
-	if($gpx_chk	== null) $gpx_chk	= 'false';
+	if($gpx	== null) $gpx = 'none';
+	if($gpx_chk	== null) $gpx_chk = 'false';
 	if($age	== null) $age = '3';
 	if($mod	== null) $mod = 'day';
 	if($click	== null) $click	= '50';
