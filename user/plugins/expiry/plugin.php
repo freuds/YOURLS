@@ -1474,7 +1474,7 @@ function expiry_db_flush( $type )
     // get rid of expired links that have not been triggered
   	case 'expired':
     default: 	// expired
-  	  $sql = "SELECT * FROM `".YOURLS_DB_PREFIX."expiry` ORDER BY timestamp ASC LIMIT 2000";
+  	  $sql = "SELECT * FROM `".YOURLS_DB_PREFIX."expiry` ORDER BY timestamp DESC LIMIT 5000";
       $expiry_list = $ydb->fetchObjects($sql);
 
   		if($expiry_list)
